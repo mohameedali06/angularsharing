@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <p>data-binding works!</p>
+    <ul>
+        <li><a href="#inter">Interpolation</a></li>
+        <li><a href="#prop">Property Binding</a></li>
+        <li> <a href="#event">Event Binding</a></li>
+        <li><a href="#two">Two way binding</a></li>
+        
+        </ul>
+<div id= inter>
+    <h2>1)interpolation</h2>
+<h1>using function {{getDetails()}}</h1>
+<div>
+    <header>{{name}}</header>
+    <article>
+        <p>The {{name}} is a smartphone made by Apple that combines a computer, iPod, digital camera and cellular phone 
+            into one device with a touchscreen interface.The {{name}} runs the iOS operating system, 
+            and in 2021 when the {{name}} was introduced, it offered up to 1 TB of storage and a 12-megapixel camera.
+
+        </p>
+    </article>
+</div>
+</div>
+<br>
+<hr>
+<div id=prop>
+    <h2>2)property binding</h2>
+<div>
+    <h3>iphone images</h3>
+    <img [src]="source" alt="animals" [height]="high" [width]="wid">
+    <img [src]="src" alt="animals" [height]="high" [width]="wid">
+    <br>
+    </div>
+</div>
+<hr>
+<div id=event>
+    <h2>3)Event binding</h2>
+<div>
+    <label for= "n1">first name</label>
+    <input type="text" name="name" #n1>
+    <label for= "n2">last name</label>
+    <input type="text" name="name" #n2>
+    <input type="button" value="check" (click)="demo(n1.value,n2.value)">
+    <p>Hi This is {{val}}</p>
+    <button [disabled]="enable" (click)="change()">Click</button>
+</div>
+</div>
+<hr>
+<div id=two>
+
+<h2>4) two way databinding</h2>
+<div>
+    <label for= "n1">USER NAME</label>
+    <input type="text" value="check" [(ngModel)]="tname">
+    {{tname}}
+</div>
+</div>
+</body>
+</html>
